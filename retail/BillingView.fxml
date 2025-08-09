@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400" prefWidth="700" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail.BillingViewController">
+    <children>
+        <TableView fx:id="billingTable" prefHeight="390.0" prefWidth="772.0">
+            <columns>
+                <TableColumn fx:id="colBillId" prefWidth="50.0" text="Bill ID" />
+                <TableColumn fx:id="colCustomerId" prefWidth="90.0" text="Customer ID" />
+                <TableColumn fx:id="colProduct" prefWidth="200.0" text="Product" />
+                <TableColumn fx:id="colQuantity" prefWidth="60.0" text="Quantity" />
+                <TableColumn fx:id="colPrice" prefWidth="100.0" text="Price" />
+                <TableColumn fx:id="colTotal" prefWidth="100.0" text="Total" />
+                <TableColumn fx:id="colCreatedAt" prefWidth="165.0" text="Date" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

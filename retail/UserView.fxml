@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail.UserViewController">
+
+    <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <Label prefHeight="16.0" prefWidth="167.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Available Products" />
+
+        <TableView fx:id="productTable" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="nameCol" minWidth="200.0" prefWidth="300.0" text="Product Name" />
+                <TableColumn fx:id="priceCol" prefWidth="150.0" text="Price" />
+                <TableColumn fx:id="actionCol" prefWidth="125.0" text="Action" />
+            </columns>
+        </TableView>
+
+        <Button maxWidth="100" onAction="#handleLogout" text="Logout" />
+    </VBox>
+
+</AnchorPane>

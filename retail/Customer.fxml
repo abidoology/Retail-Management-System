@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400" prefWidth="600" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="retail.CustomerController">
+    <children>
+        <TableView fx:id="tblCustomers" layoutX="20" layoutY="20" prefHeight="200" prefWidth="560">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="180" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="180" text="Email" />
+                <TableColumn fx:id="colPhone" prefWidth="150" text="Phone" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtName" layoutX="21.0" layoutY="235.0" prefHeight="32.0" prefWidth="170.0" promptText="Customer Name" />
+        <TextField fx:id="txtEmail" layoutX="218.0" layoutY="235.0" prefHeight="32.0" prefWidth="170.0" promptText="example@gmial.com" />
+        <TextField fx:id="txtPhone" layoutX="410.0" layoutY="235.0" prefHeight="32.0" prefWidth="170.0" promptText="Contact Number" />
+
+        <Button fx:id="btnAdd" layoutX="70.0" layoutY="290.0" onAction="#addCustomer" text="Add" />
+        <Button fx:id="btnUpdate" disable="true" layoutX="150.0" layoutY="290.0" onAction="#updateCustomer" text="Update" />
+        <Button fx:id="btnDelete" disable="true" layoutX="250.0" layoutY="290.0" onAction="#deleteCustomer" text="Delete" />
+    </children>
+</AnchorPane>
