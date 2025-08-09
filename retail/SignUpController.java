@@ -54,7 +54,7 @@ public class SignUpController {
                 return;
             }
 
-            // Insert into users table with extra fields
+            
             String insertUserSql = "INSERT INTO users (username, password, role, name, phone, email) VALUES (?, ?, 'user', ?, ?, ?)";
             PreparedStatement insertUserStmt = conn.prepareStatement(insertUserSql, PreparedStatement.RETURN_GENERATED_KEYS);
             insertUserStmt.setString(1, username);
@@ -66,14 +66,14 @@ public class SignUpController {
             int rows = insertUserStmt.executeUpdate();
 
             if(rows > 0) {
-                // Get generated user id (if needed)
+                
                 ResultSet generatedKeys = insertUserStmt.getGeneratedKeys();
                 int userId = 0;
                 if (generatedKeys.next()) {
                     userId = generatedKeys.getInt(1);
                 }
 
-                // Insert into customers table automatically
+                
                 String insertCustomerSql = "INSERT INTO customers (name, email, phone) VALUES (?, ?, ?)";
                 PreparedStatement insertCustomerStmt = conn.prepareStatement(insertCustomerSql);
                 insertCustomerStmt.setString(1, name);
@@ -83,7 +83,7 @@ public class SignUpController {
 
                 showAlert(Alert.AlertType.INFORMATION, "Success", "User registered successfully.");
 
-                // Close sign up window and open login
+                
                 Stage stage = (Stage) txtUsername.getScene().getWindow();
                 stage.close();
 
@@ -125,7 +125,7 @@ public class SignUpController {
         alert.setHeaderText(null);
         alert.setContentText(message);
 
-        // CSS 
+        
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         dialogPane.getStyleClass().add("custom-alert");
@@ -133,3 +133,4 @@ public class SignUpController {
         alert.showAndWait();
     }
 }
+
