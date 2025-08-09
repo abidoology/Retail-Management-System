@@ -19,7 +19,7 @@ public class BillingRecord {
         this.createdAt = createdAt;
     }
 
-    // Getters (important for PropertyValueFactory)
+    // Getters 
     public int getBillId() { return billId; }
     public int getCustomerId() { return customerId; }
     public String getProductName() { return productName; }
@@ -28,3 +28,4 @@ public class BillingRecord {
     public double getTotal() { return total; }
     public String getCreatedAt() { return createdAt; }
 }
+
